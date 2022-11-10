@@ -1,3 +1,5 @@
+package Resources;
+
 public interface GlobalVars {
     static String username = "";
     static String password = "";

@@ -1,16 +1,17 @@
+package Resources;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-public class DBConnector implements GlobalVars {
-    Connection connection;
+public class DBConnector implements GlobalVars{
+    public Connection connection;
     public DBConnector () {
     }
 
     public void connect() {
         try {
-            connection = DriverManager.getConnection(url, username, password);
+            connection = DriverManager.getConnection(GlobalVars.url, GlobalVars.username, GlobalVars.password);
             System.out.println("Connected to Oracle Database Server!");
         } catch (SQLException e) {
             System.out.println("Oops, error:");

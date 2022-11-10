@@ -1,5 +1,7 @@
 package Models;
 
+import Resources.Controller;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -7,6 +9,7 @@ import java.util.Scanner;
 
 public class Student implements Tuple
 {
+    int id;
     String name;
     String email;
 
@@ -15,6 +18,12 @@ public class Student implements Tuple
     public Student(String name, String email) {
         this.setName(name);
         this.setEmail(email);
+    }
+
+    public Student(int id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
     }
 
     public void setName(String name) {
@@ -33,12 +42,10 @@ public class Student implements Tuple
         }
     }
 
-
-
     @Override
-    public void insert(Connection connection) {
-        this.getInput();
-        this.insertOnDb(connection);
+    public void insert(Controller controller) {
+        this.getInput(controller.stdin);
+        this.insertOnDb(controller.db.connection);
     }
 
     @Override
@@ -64,12 +71,19 @@ public class Student implements Tuple
     }
 
     @Override
-    public void getInput() {
-        Scanner stdin = new Scanner(System.in);
+    public void getInput(Scanner stdin) {
         System.out.println("Models.Student's name:");
         setName(stdin.nextLine());
         System.out.println("Models.Student's email:");
         setEmail(stdin.nextLine());
-        stdin.close();
+    }
+
+    public String toString() {
+        String str =
+            "\nID: " + this.id +
+            "\nNAME: " + this.name +
+            "\nEMAIL: " + this.email;
+        return str;
     }
 }
+

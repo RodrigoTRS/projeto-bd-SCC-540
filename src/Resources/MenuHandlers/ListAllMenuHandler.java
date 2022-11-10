@@ -26,7 +26,7 @@ public class ListAllMenuHandler {
 
                 try {
                     Statement statement = controller.db.connection.createStatement();
-                    ResultSet resultSet = statement.executeQuery("SELECT * FROM STUDENTS");
+                    ResultSet resultSet = statement.executeQuery("SELECT * FROM STUDENTS ORDER BY ID");
                     while (resultSet.next()) {
                         Student student = new Student(
                             resultSet.getInt("ID"),
@@ -39,11 +39,8 @@ public class ListAllMenuHandler {
                     statement.close();
 
                 } catch (SQLException e) {
-
                     throw new RuntimeException(e);
-
                 }
-
                 break;
         }
     }

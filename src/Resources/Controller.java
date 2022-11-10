@@ -28,7 +28,6 @@ public class Controller {
             this.menu.mainMenu();
 
             String operator = stdin.nextLine();
-            operator.toUpperCase(Locale.ROOT);
 
             switch (operator) {
 

@@ -72,9 +72,9 @@ public class Student implements Tuple
 
     @Override
     public void getInput(Scanner stdin) {
-        System.out.println("Models.Student's name:");
+        System.out.println("Student's name:");
         setName(stdin.nextLine());
-        System.out.println("Models.Student's email:");
+        System.out.println("Student's email:");
         setEmail(stdin.nextLine());
     }
 

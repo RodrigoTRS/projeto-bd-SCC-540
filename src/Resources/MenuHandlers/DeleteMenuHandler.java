@@ -25,12 +25,16 @@ public class DeleteMenuHandler {
                 String sql = "DELETE FROM STUDENTS WHERE ID=" + "\'" + deletionID + "\'";
                 try {
                     Statement statement = controller.db.connection.createStatement();
-                    statement.executeQuery(sql);
+                    int rows = statement.executeUpdate(sql);
+                    if (rows > 0) {
+                        System.out.println("A student has been deleted!");
+                    } else {
+                        System.out.println("There isn't a student with this ID!");
+                    }
                     statement.close();
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
-                System.out.println("Student deleted!");
                 break;
         }
     }

@@ -1,6 +1,5 @@
 package Resources.MenuHandlers;
 
-import Models.Student;
 import Resources.Controller;
 
 import java.sql.SQLException;

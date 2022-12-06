@@ -1,10 +1,8 @@
 package Resources.MenuHandlers;
 
-import Models.Student;
+import Models.Animal;
 import Resources.Controller;
-import Resources.DBConnector;
 
-import java.sql.Connection;
 import java.util.Scanner;
 
 public class InsertMenuHandler {
@@ -20,9 +18,9 @@ public class InsertMenuHandler {
         operator = Integer.parseInt(stdin.nextLine());
 
         switch (operator) {
-            case 1: // Case Student
-                Student student = new Student();
-                student.insert(controller);
+            case 1: // Case Animal
+                Animal animal = new Animal();
+                animal.insert(controller);
                 break;
         }
     }

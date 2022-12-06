@@ -3,7 +3,7 @@
 SELECT M.NOME, M.TELEFONE, M.CEP
 FROM MORADOR M
 WHERE
-(M.RENDA_FAMILIAR/(M.NUM_FILHOS+2) > 1120) /* Renda maior que 1 salário mínimo por pessoa */
+(M.RENDA_FAMILIAR/(M.NUM_FILHOS+2) > 1212) /* Renda maior que 1 salário mínimo por pessoa */
 AND M.NUM_FILHOS <= 2 /* Não mais do que dois filhos */
 AND M.NUM_PETS <= 1 /* Não mais do que um pet */
 AND M.IDADE <= 65; /* Idade do responsável menor que 65 */
@@ -22,4 +22,5 @@ AND AN.ID_COLEIRA NOT IN (SELECT ANIMAL FROM ADOCAO) /* Animal ainda não adotad
 SELECT E.NOME, SUM(C.VALOR) AS VALOR_DOADO
 FROM ENTIDADE_PARCEIRA E JOIN CONTRIBUICAO C
 ON E.NOME = C.ENTIDADE
-GROUP BY E.NOME;
+GROUP BY E.NOME
+ORDER BY VALOR_DOADO DESC;

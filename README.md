@@ -5,6 +5,9 @@ Esse projeto é referente ao trabalho final de disciplina de Bases de Dados, ond
 ## Membros do Grupo
 
 Rodrigo T. R. da Silva – 11816164
+
 Fellipe Tripovichy Andrade – 9850332
+
 Rafael Jun Morita – 10845040
+
 Heitor Camilo de Freitas e Oliveira – 11297785

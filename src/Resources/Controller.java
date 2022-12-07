@@ -2,6 +2,7 @@ package Resources;
 
 import Resources.MenuHandlers.InsertMenuHandler;
 import Resources.MenuHandlers.ListMenuHandler;
+import Resources.MenuHandlers.ListByTypeHandler;
 
 import java.sql.SQLException;
 import java.sql.Statement;

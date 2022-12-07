@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Animal implements Tuple
 {
-    int idColeira;
+    String idColeira;
     String Nome;
     String Canil;
     String Tipo;
@@ -22,7 +22,7 @@ public class Animal implements Tuple
 
 
     public Animal() {}
-    public Animal(int idColeira, String nome, String canil, String tipo, int idade, String raca, String isCastrado, String isVermifugado) {
+    public Animal(String idColeira, String nome, String canil, String tipo, int idade, String raca, String isCastrado, String isVermifugado) {
         this.idColeira = idColeira;
         this.Nome = nome;
         this.Canil = canil;

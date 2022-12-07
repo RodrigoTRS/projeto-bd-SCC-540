@@ -1,10 +1,8 @@
 package Resources;
 
-import Resources.MenuHandlers.DeleteMenuHandler;
 import Resources.MenuHandlers.InsertMenuHandler;
-import Resources.MenuHandlers.ListAllMenuHandler;
+import Resources.MenuHandlers.ListMenuHandler;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Controller {
@@ -41,18 +39,11 @@ public class Controller {
                 case "2": // Case List All
                     this.state = "list all";
                     this.menu.listAllMenu();
-                    ListAllMenuHandler listAllMenuHandler = new ListAllMenuHandler(this);
-                    listAllMenuHandler.handle(stdin);
+                    ListMenuHandler listMenuHandler = new ListMenuHandler(this);
+                    listMenuHandler.handle(stdin);
                     break;
 
-                case "3": // Case Delete
-                    this.state = "delete";
-                    this.menu.deleteMenu();
-                    DeleteMenuHandler deleteMenuHandler = new DeleteMenuHandler(this);
-                    deleteMenuHandler.handle(stdin);
-                    break;
-
-                case "E" : // Case Exit
+                case "S" : // Case Exit
                     this.state = "exit";
                     break;
             }

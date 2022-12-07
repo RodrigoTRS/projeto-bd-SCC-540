@@ -1,15 +1,13 @@
 package Resources.MenuHandlers;
 
-import Models.Animal;
 import Resources.Controller;
 
-import java.sql.*;
 import java.util.Scanner;
 
-public class ListAllMenuHandler {
+public class ListMenuHandler {
     Controller controller;
 
-    public ListAllMenuHandler(Controller controller) {
+    public ListMenuHandler(Controller controller) {
         this.controller = controller;
     }
 

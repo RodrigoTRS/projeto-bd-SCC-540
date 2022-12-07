@@ -20,10 +20,9 @@ public class MenuController {
         this.reset();
         this.str.append("\n\n\n\n\n\n\n\n\n");
         this.divider();
-        this.str.append("E - Exit\n");
-        this.str.append("1 - Insert\n");
-        this.str.append("2 - List All\n");
-        this.str.append("3 - Delete\n");
+        this.str.append("S - Sair\n");
+        this.str.append("1 - Inserir\n");
+        this.str.append("2 - Listar\n");
         this.divider();
         this.print();
     }
@@ -31,7 +30,7 @@ public class MenuController {
     public void insertMenu() {
         this.reset();
         this.divider();
-        this.str.append("1 - Student\n");
+        this.str.append("1 - Animal\n");
         this.divider();
         this.print();
     }
@@ -39,18 +38,11 @@ public class MenuController {
     public void listAllMenu() {
         this.reset();
         this.divider();
-        this.str.append("1 - Student\n");
+        this.str.append("1 - Animal\n");
         this.divider();
         this.print();
     }
 
-    public void deleteMenu() {
-        this.reset();
-        this.divider();
-        this.str.append("1 - Student\n");
-        this.divider();
-        this.print();
-    }
 
     public void print() {
         System.out.println(this.str.toString());

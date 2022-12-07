@@ -43,14 +43,6 @@ public class MenuController {
         this.print();
     }
 
-    public void byTypeListAllMenu() {
-        this.reset();
-        this.divider();
-        this.str.append("1 - Dog\n");
-        this.divider();
-        this.print();
-    }
-
 
     public void print() {
         System.out.println(this.str.toString());

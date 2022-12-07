@@ -3,6 +3,8 @@ package Resources;
 import Resources.MenuHandlers.InsertMenuHandler;
 import Resources.MenuHandlers.ListMenuHandler;
 
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class Controller {
